@@ -1,132 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en"> 
+<head>
+<title>Game Of Thrones</title>
 
-<html>
-<head> <script>
-function cnt(a,b,c,d,e){
-                var toc= document.getElementsByName("toc");
-                var color= document.getElementsByName("color");
-                color = color[0].value;
-                var size= document.getElementsByName("size");
-                var location= document.getElementsByName("location");
-                var total= document.getElementById("total").value;
-                var lp=Number(0);
-                for(var i = 0 ;i < toc.length; i++){
-                        if(toc[i].checked){
-                           toc= toc[i].value;
-                            break;
-                        }
-                }
-                for(var i = 0; i < size.length; i++){
-                    if(size[i].checked){
-                        size=size[i].value;
-                        break;
-                    }  
-                }
-                for(var i = 0; i < location.length; i++){
-                    if(location[i].checked){
-                        lp+=Number(location[i].value);
-                    } 
-                }
+<link rel="stylesheet" href="css/css.css" type="text/css"/>
 
-            console.log(toc);
-            console.log(color);
-            console.log(size);
-            console.log(lp);
-            console.log(total);
-
-            var calculate = Number(size)*(Number(toc)+Number(color)+Number(lp));
-            var result = Number(total)*Number(calculate);
-            console.log(result);
-
-            printrResult(result);
-        
-            }
-            function printrResult(result){
-                var resultDiv= document.getElementById("resultDiv");
-                resultDiv.innerText = "result: " + result;
-             
-            }</script></head>
-<title>Barcelona</title>
-<body>
-<form action="https://formspree.io/f/moqpkgzq" method="POST">
-<br>
-<label>
-מספר הזמנה:<br>
-</label>
-<input type="text" name="orderNumber" placeholder="Name Id" size="30" value="29760734" disabled>
-<br><br>
-<label>
-שם פרטי :<br>
-</label>
-<input type="text" name="FirstName" size="30" maxlength="20" >
-<br><br>
-<label>
-שם משפחה :<br>
-</label>
-<input type="text" name="lastName" size="30" maxlength="20" >
-<br><br>
-<br><br>
-<label >סוג מלבוש :</label><br>
-<input type="radio" id="חולצה" name="toc" value="10" checked="checked">
-<label> חולצה 10 שח</label><br>
-<input type="radio" id="גופיה" name="toc" value="10">
-<label>גופיה 10 שח</label><br>
-<input type="radio" id="סוודר" name="toc" value="20">
-<label>סוודר 20 שח</label><br>
-<input type="radio" id="קפוצון" name="toc" value="30">
-<label>קפוצון 30 שח</label><br>
-<input type="radio" id="מעיל" name="toc" value="50">
-<label>מעיל 50 שח</label><br>
-<br>
-<label for="color">צבע:</label><br>
-<select id="color" name="color">
-<option value="0" selected>לבן</option>
-<option value="5">אדום- תוספת 5 שח</option>
-<option value="-2">ירוק</option>
-<option value="0">כחול</option>
-</select>
-<br><br>
-<br><br>
-<label >מידה :</label><br>
-<input type="radio" id="s" name="size" value="0.9">
-<label>s</label><br>
-<input type="radio" id="m" name="size" value="1">
-<label>m</label><br>
-<input type="radio" id="l" name="size" value="1">
-<label>l</label><br>
-<input type="radio" id="xl" name="size" value="1.1">
-<label>xl</label><br>
-<br><br>
-<br><br>
-<label >מיקום:</label><br>
-<input type="checkbox" id="location" name="location" value="3">
-<label for="קדימה">קדימה</label><br>
-<input type="checkbox" id="location" name="location" value="3">
-<label for=" אחורה ">אחורה</label><br>
-<input type="checkbox" id="location" name="location" value="3">
-<label for=" שרוול ימין ">שרוול ימין</label><br>
-<input type="checkbox" id="location" name="location" value="3">
-<label for=" שרוול שמאל ">שרוול שמאל</label><br>
-<br><br>
-<br><br>
-<br><br>
-<label>
-Address:
-<br>
-<textarea name="address" rows="10" cols="30"></textarea>
-</label>
-<br><br>
-<br><br>
-<label>חשב מחיר </label>
-<input type="text" id="total" name="total" placeholder="1" size="5"  value="1">
-<br><br>
-<input type="button" onclick="cnt()" value="calculate the price" size="4">
-<div id="resultDiv" >
- result:
+</head>
+<center><img src="img\main.png" style="width:800px;height:300px;"> 
+<body >
+<div id="nav">
+    <div id="nav_wrapper">
+       <center> <ul>
+			<li><a href="index.html">main page</a></li>
+			<li> <a href="actors.html">actors</a></li>
+			<li> <a href="similar.html">similar TV show</a></li>	
+        </ul></center>
+    </div>
 </div>
-<br><br>
-<input type="submit" value="שלח הזמנה ">
-<input type="reset" value="מחק">
+<br/><br/><br/>
 
-</form>
+<h3>
+<p>
+Game of Thrones is an American fantasy drama television series created by David Benioff and D. B. Weiss for HBO. It is an adaptation of A Song of Ice and Fire, a series of fantasy novels by George R. R. Martin, the first of which is A Game of Thrones. The show was shot in the United Kingdom, Canada, Croatia, Iceland, Malta, Morocco, and Spain. It premiered on HBO in the United States on April 17, 2011, and concluded on May 19, 2019, with 73 episodes broadcast over eight seasons.
+</p>
+<p>
+Set on the fictional continents of Westeros and Essos, Game of Thrones has a large ensemble cast and follows several story arcs throughout the course of the show. A major arc concerns the Iron Throne of the Seven Kingdoms of Westeros and follows a web of alliances and conflicts among the noble dynasties, either vying to claim the throne or fighting for independence from it. Another focuses on the last descendant of the realm's deposed ruling dynasty, who has been exiled to Essos and is plotting a return to the throne. A third story arc follows the Night's Watch, a military order defending the realm against threats from the North.
+</p>
+<p>
+Game of Thrones attracted a record viewership on HBO and has a broad, active, and international fan base. Critics have praised the series for its acting, complex characters, story, scope, and production values, although its frequent use of nudity and violence (including sexual violence) has been subject to criticism. The final season received significant critical backlash for its condensed story and creative decisions, with many considering it a disappointing conclusion. The series received 59 Primetime Emmy Awards, the most by a drama series, including Outstanding Drama Series in 2015, 2016, 2018 and 2019. Its other awards and nominations include three Hugo Awards for Best Dramatic Presentation, a Peabody Award, and five nominations for the Golden Globe Award for Best Television Series – Drama. Many critics and publications have named the show as one of the best television series of all time.
+</p>
+<p>
+To the offical website: <a href="https://www.hbo.com/game-of-thrones">https://www.hbo.com/game-of-thrones</a>
+</p>
+<p>
+To the fans page on facebook:<a href="https://www.facebook.com/GoTFans4Ever/">https://www.facebook.com/GoTFans4Ever/</a> 
+</p></h3>
+<p>
+<img src="img\2.jpg" > 
+</p>
+
+
 </body>
+
 </html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Nespresso</title>
+
+<link rel="stylesheet" href="css/css.css" type="text/css"/>
+<script type="text/javascript" language="javascript">      
+     function checkName(txt)
+     {
+       var isName;	
+       var strName;
+       strName=txt.value;
+       var isNot;
+       isNot="!@#$%^&*()_+|\/.;:1234567890?<>=[]{}";
+       isName=true;
+       if(strName.length>0)
+        {
+          for(var i=0;i<=strName.length-1;i++)
+            for(var j=0; j<=isNot.length-1;j++)
+               if(strName.charAt(i)==isNot.charAt(j))
+			isName=false;
+        }
+       else
+        { return "לא מלאת שדה חובה" + "\n";}
+       if(isName==false)
+         return "שם לא חוקי" + "\n";
+       else
+         return "";
+      } 
+
+      function checkNumber(txt,len)
+      {
+	var strNumber;
+        strNumber=txt.value;
+        if(strNumber.length==len)
+         if(isNaN(strNumber))
+           return "טעות במספר"+"\n";
+         else
+           return "";
+        else
+           return "אורך של מספר לא חוקי"+ "\n";;
+      }   
+     
+     function CheckAll(MyTofes)
+     {
+       var msg;
+       msg="";
+       msg+=checkName(MyTofes.FirstName);
+       msg+=checkName(MyTofes.LastName);
+       msg+=checkNumber(MyTofes.ID,9);
+       msg+=checkNumber(MyTofes.telefon,7);
+     
+       if(msg.length==0)
+         {
+           alert("OK");
+	   return true;
+         }
+       else
+         {
+           alert(msg);
+           return false;
+         }
+     }             
+	
+    </script>
+</head>
+<center><img src="koteret2.jpg" > 
+<body >
+
+<div id="nav">
+    <div id="nav_wrapper">
+       <center> <ul><li> <a href="kesher.html">צור קשר</a></li>
+			<li> <a href="why.html">?למה בחרתי</a></li>
+          
+            <li> <a href="club.html">הרשמה למועדון הלקוחות</a></li>
+            <li> <a href="#">המוצרים שלנו</a>
+			<ul dir=ltr>
+                    <li><a href="machine.html">מכונות קפה</a>
+                    </li>
+                    <li><a href="cap.html">קפסולות</a>
+                    </li>
+                    <li><a href="acc.html">אקססוריז לקפה</a>
+                    </li>
+                </ul>
+            </li>
+			<li><a href="main.html">דף ראשי</a></li>
+        </ul></center>
+    </div>
+</div>
+<br/><br/><br/><center><img src="cc.jpg" width="75%" height=200></center><br/><br/><br/>
+<div id="buyy">
+ <center><font size="7" color="black" face="david"><b>מלא את הפרטים</b></font></center>
+   <br/><br/>
+  <form name="MyTofes" action="" onsubmit="return CheckAll(this);">
+   <center> <table>
+     <tr>
+       <td><input type="text" name="FirstName"/></td>
+       <td>*
+שם פרטי </td>
+
+     </tr>
+     <tr> 
+       <td><input type="text" name="LastName"/></td>
+       <td>*
+שם משפחה </td>
+
+     </tr>
+     <tr> 
+       <td><input type="text" name="ID"/></td>
+       <td>*
+מספר תעודת זהות</td>
+       
+     </tr>
+
+     <tr> 
+       <td><select name="kod"><option value="054">054</option>
+       <option value="052">052</option>
+       <option value="050">050</option>
+       <option value="057">057</option>
+       <input type="text" name="telefon"/>
+       <td>מס' טלפון </td>
+       
+     </tr>
+
+     </table>
+<br/><br/><br/>
+      <input type="reset" value="   נקה    "/>
+      <input type="submit" value="   שלח     " />
+    
+  </form>
+<br>שדות חובה מסומנים בכוכבית<br><br><br><br><br>
+
+</body>
+
+</html>
